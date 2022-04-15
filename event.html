@@ -8,7 +8,7 @@
     <script src="../static/js/dl.js"></script>
     <style type="text/css">
         /*外部深粉色部分 */
-
+        
         .box {
             height: 800px;
             width: 1200px;
@@ -22,7 +22,7 @@
             background-color: #DD868C;
         }
         /*外部浅粉色部分 */
-
+        
         .box1 {
             height: 700px;
             width: 1160px;
@@ -34,7 +34,7 @@
             border-bottom-right-radius: 30px;
             background-color: #eac9cd;
         }
-
+        
         input {
             margin-left: 40px;
             height: 30px;
@@ -46,29 +46,30 @@
             border-bottom-right-radius: 25px;
         }
         /* logo */
-
+        
         .png {
             position: absolute;
             top: 80px;
             margin-left: 1%;
             margin-bottom: 50px;
         }
-
+        
         .msg {
             position: absolute;
             margin-left: 54%;
             margin-top: -240px;
         }
         /* 四个按钮 */
-
+        
         button {
             font-size: 20px;
             position: absolute;
-            top: 280px;
+            top: 320px;
             margin-left: 4%;
             color: #d37379;
             text-shadow: 5px 5px 5px rgb(255, 255, 255), 0px 0px 2px rgb(255, 255, 255);
             font-family: align;
+            background: linear-gradient(#dfe9f7, #f5cdd3);
             font-weight: 700;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
@@ -77,28 +78,27 @@
             width: 160px;
             height: 65px;
             text-align: center;
-            background: linear-gradient(#dfe9f7, #f5cdd3);
         }
-
+        
         .button3 {
             position: absolute;
             margin-left: 4%;
             margin-bottom: 50px;
         }
-
+        
         .button2 {
             position: absolute;
             margin-left: 4%;
-            margin-top: 115px;
+            margin-top: 135px;
         }
-
+        
         .button1 {
             position: absolute;
             margin-left: 4%;
             margin-top: 230px;
         }
         /* 搜索框 */
-
+        
         .sousuo {
             height: 80px;
             width: 780px;
@@ -109,19 +109,13 @@
             border-bottom-right-radius: 30px;
             background-color: #f8c5ae;
         }
-        /* 搜索框图标 */
 
-        .png1 {
-            position: absolute;
-            top: 135px;
-            margin-left: 2%;
-            margin-bottom: 50px;
-        }
+        
         /* 深粉色小框 */
-
+        
         .da {
             font-size: 24px;
-            text-shadow: 5px 5px 5px rgb(255, 255, 255), 0px 0px 2px rgb(255, 255, 255);
+            /* text-shadow: 5px 5px 5px rgb(255, 255, 255), 0px 0px 2px rgb(255, 255, 255); */
             font-weight: 900;
             color: #ffffff;
             height: 480px;
@@ -131,9 +125,12 @@
             margin-top: 40px;
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            text-align: center;
         }
         /* 小框里的小框 */
-
+        
         #box2 {
             height: 360px;
             width: 700px;
@@ -150,7 +147,7 @@
             color: #faecd3;
             overflow: hidden;
         }
-
+        
         #box2>div {
             /* 子容器比父容器的宽度多 17 px, 经测正好是滚动条的默认宽度 */
             height: 347px;
@@ -160,7 +157,7 @@
             overflow-y: scroll;
             color: #d37379;
         }
-
+        
         body {
             background-color: #EDEEF3
         }
@@ -171,116 +168,122 @@
 <body>
 
 
-<div class="box">
+    <div class="box">
 
-    <div id="tittle">
-        <h2 align="center"></h2>
-        <div class="box1">
-            <div class="png">
-                <img src="file:///Users/baijialu/Desktop/cpt/clock/src/main/java/clock/clock/controller/WechatIMG1560.png" width="250" height="170" top="120" />
-                <table style="height:700px;border-color:#bdbdbd;
+        <div id="tittle">
+            <h2 align="center"></h2>
+            <div class="box1">
+                <div class="png">
+                    <img src="img/logo.png" width="250" height="170" top="120" />
+                    <table style="height:700px;border-color:#bdbdbd;
                     border-left-style:solid;
                     margin-top: -178px;
                     margin-left: 250px;
                     border-width:1px">
-                    <tr>
-                        <td valign="top"></td>
-                    </tr>
-                </table>
+                        <tr>
+                            <td valign="top"></td>
+                        </tr>
+                    </table>
 
-            </div>
+                </div>
 
-            <div class="button">
-                <br> <button onclick="foHome()">Home</button> <br>
-            </div>
-            <div class="button1">
-                <br> <button onclick="foUser()">User</button> <br>
-            </div>
-            <div class="button2">
-                <br> <button onclick="foLogin()">Event</button> <br>
-            </div>
-            <div class="button3">
-                <br> <button onclick="foLogin()">Calendar</button> <br>
-            </div>
+                <div class="button" style="margin-bottom: 15px;">
+                    <br> <button onclick="foHome()">Home</button> <br>
+                </div>
+                <div class="button3" style="margin-bottom: 30px;">
+                    <br> <button onclick="foUser()">User</button> <br>
+                </div>
+                <div class="button2">
+                    <br> <button onclick="foLogin()">Event</button> <br>
+                </div>
+                <!-- <div class="button3">
+                    <br> <button onclick="foLogin()">Calendar</button> <br>
+                </div> -->
 
-            <div class="sousuo">
-                <div id="title">
-                    <p class="input">
-                        <br> <input id="keyword" type="text" placeholder="search">
-                        <button onclick="search()" style="width:120px;height:40px; top: 150px;right:180px">search</button>
-                    <div class="png1">
-                        <img src="file:///Users/baijialu/Desktop/7eeecd70e32b07d2c828cfb026140611.png" width="90" height="68" />
+                <div class="sousuo">
+                    <div id="title">
+                        <p class="input">
+                            <br> <input id="keyword" type="text" placeholder="search">
+                            <input type="button" onclick="search()" value="search" style="height: 40px;width: 100px; font-size: 20px;color: #d37379;
+                            text-shadow: 5px 5px 5px rgb(255, 255, 255), 0px 0px 2px rgb(255, 255, 255);
+                            background: linear-gradient(#dfe9f7, #f5cdd3);">
+                            <br>
+                        </p>
+
+
                     </div>
-                    <br>
+                </div>
+
+
+                <div class="da">
+                    <p class="input_da" style="padding-top: 23px;">
+                        <span>The search results</span>
                     </p>
 
 
                 </div>
-            </div>
+
+                <div id="box2">
+
+                    <div id="event-box">
+
+                    </div>
+                </div>
+                <div style="float: right;margin-right: 40px;margin-bottom: 40px;margin-top: -15px;">
 
 
-            <div class="da">
-                <p class="input_da">
+                    </a>
+                    </i>
+                    </h4>
 
-            </div>
-
-            <div id="box2">
-                <div id="event-box">
-                    The search results
                 </div>
             </div>
-            <div class="msg">
-                <br> <button onclick="foReturn()" style="width:80px;height:30px;top: 290px;right:-250px">return</button> <br>
+        </div>
+    </div>
+    <Script Language="JavaScript">
+        function foReturn() {
+            location.href = "home.html"
+        }
 
-                </a>
-                </i>
-                </h4>
+        function foHome() {
+            location.href = "home.html"
+        }
 
-            </div>
-        </div> </div> </div>
-<Script Language="JavaScript">
-    function foReturn() {
-        location.href = "home.html"
-    }
+        function foUser() {
+            location.href = "user.html"
+        }
+    </Script>
 
-    function foHome() {
-        location.href = "home.html"
-    }
-    function foUser() {
-        location.href = "user.html"
-    }
-</Script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function search() {
+            let keyword = $('#keyword').val();
+            $.ajax({
+                type: 'get',
+                url: 'http://localhost:8080/reminder/event/search?keyword=' + keyword,
+                success: function(data) {
+                    console.log(data)
+                    if (data.code == 0) {
+                        let eventList = data.eventList;
+                        $('#event-box').children().remove()
+                        for (let i = 0; i < eventList.length; i++) {
 
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script>
-    function search() {
-        let keyword = $('#keyword').val();
-        $.ajax({
-            type: 'get',
-            url: 'http://localhost:8080/reminder/event/search?keyword=' + keyword,
-            success: function(data) {
-                console.log(data)
-                if (data.code == 0) {
-                    let eventList = data.eventList;
-                    $('#event-box').children().remove()
-                    for (let i = 0; i < eventList.length; i++) {
-
-                        let waitToAppend = "<span>";
-                        waitToAppend += eventList[i].event;
-                        waitToAppend += " ———— ";
-                        waitToAppend += eventList[i].eventTime;
-                        waitToAppend += "</span><br>";
-                        $('#event-box').append(waitToAppend);
+                            let waitToAppend = "<span>";
+                            waitToAppend += eventList[i].event;
+                            waitToAppend += " ———— ";
+                            waitToAppend += eventList[i].eventTime;
+                            waitToAppend += "</span><br>";
+                            $('#event-box').append(waitToAppend);
+                        }
                     }
+                },
+                error: function(data) {
+                    console.log("收到服务器error返回的数据")
+                    console.log(data)
                 }
-            },
-            error: function(data) {
-                console.log("收到服务器error返回的数据")
-                console.log(data)
-            }
-        })
-    }
-</script>
+            })
+        }
+    </script>
 </body>
 
 </html>
