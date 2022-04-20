@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User</title>
+<link rel="stylesheet" type="text/css" href="../css/user.css">
+<!--<script src="../static/js/dl.js"></script> --> 
+<script>var adobewebfontsappname ="dreamweaver"</script> 
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts 
+server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/the-girl-next-door:n4:default.js" type="text/javascript"></script>
+<script> var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/schoolbell:n4:default.js" type="text/javascript"></script> 
+<script src = "../Scripts/userNameResponsive.js" defer></script> 
+<script src = "../Scripts/userGender.js" defer></script> 
+<script src = "../Scripts/userEmail.js" defer>
+    //back end  
+</script> 
+<script src = "../Scripts/userFetchLuckyZodiac.js" defer></script> 
+<script src = "../Scripts/userBirthdayZodiac.js" defer></script>
+</head>
+
+<body>
+<div class="box">
+    <div id="tittle"> 
+        <!--        <h2 align="center">Personal Homepage</h2>-->
+        <div class="box1">
+            <div class="png">
+                <table style="height:700px;border-color:#bdbdbd;
+                    border-left-style:solid;
+                    margin-top: -178px;
+                    margin-left: 250px;
+                    border-width:1px"
+                    >
+                    <tr><img src="../res/logo2x-clr.png" width="250" height="170" top="120" alt="logo"/>
+                        <td valign="top"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "navBtn" id="button"> <br>
+                <button href="home.html">Home</button>
+                <br>
+            </div>
+            <div class = "navBtn" id="button1"> <br>
+                <button href="user.html">User</button>
+                <br>
+            </div>
+            <div class = "navBtn" id="button2"> <br>
+                <button href="event.html">Event</button>
+                <br>
+            </div>
+            <div class = "navBtn" id="button3"> <br>
+                <button href="calendar.html">Calendar</button>
+                <br>
+            </div>
+            <div class="page"> 
+                <!--				page text start here-->
+                <div id="title">
+                    <h1>Personal Homepage</h1>
+                    <h4 id="username_disp"><br>
+                    </h4>
+                </div>
+                <div class="content"> 
+                    <!--					content text start here-->
+                    <table class="content" id="userInfoTable">
+                        <tr>
+                            <td><div class="profile-pic-div"> <img src="../res/akari_xxl.png" id="photo">
+                                    <input type="file" id="file">
+                                    <label for="file" id="uploadBtn"> Choose Photo</label>
+                                </div>
+                                <script src="../Scripts/photo.js"></script>
+							<br><br>
+							<br><br>
+								<button id="btnSubmit">Submit!</button>
+					
+							</td>
+                            <td><table class="textSeg">
+                                    <tbody class="textSeg">
+                                        <tr class = "infoRow">
+                                            <th>Username</th>
+                                            <td><form id="username_form">
+                                                    <!--                                                    <input type="text" id="username_inp" placeholder="enter your username here"  oninput="helloUser();"/>-->
+                                                    <input type="text" id="username_inp" placeholder="enter your username here"/>
+                                                </form></td>
+                                        </tr>
+                                        <tr class = "infoRow">
+                                            <th>Gender</th>
+                                            <td><!--		Gender input buffer		-->
+                                                
+                                                <select id="genderInp" name="gender">
+                                                    <option value="secret">Secret</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                </select>
+                                                
+                                                <!--												<script src = "../Scripts/userGender.js"></script>--></td>
+                                        </tr>
+                                        <tr class = "infoRow">
+                                            <th>Birthday</th>
+                                            <td><input type="date" id="bdayInp" name="your-birthday" value = "1999-12-31" />
+                                                
+                                                <!--										onchange="birthdayListener(event);"/>--></td>
+                                            <!--                                            <td id="bdata">birthday data</td>--> 
+                                            <!--
+											<script src="../Scripts/userBirthdayZodiac.js">
+											// call this js only after ''#zodiacDisp' loaded as HTML
+											</script>
+											
+--> 
+                                            <!--
+                                            <script>
+	//	 birthdayListener:: event -> date
+		function birthdayListener(e){
+			alert(e.target.value);
+			const bdayStr = e.target.value;
+			const zoidac = "dummy zoidac";
+			document.getElementById("zoadic_name").innerHTML = zoidac;
+
+		}	
+		ymdArr = d.split("-");
+		
+		</script> 
+--> 
+                                        </tr>
+                                        <tr class = "infoRow">
+                                            <th>Zodiac</th>
+                                            <td id = "zodiacDisp">　月が綺麗ですね </td>
+                                            <!--											<script src = "../Scripts/userBirthdayZodiac.js"></script>--> 
+                                        </tr>
+                                        <tr class = "infoRow">
+                                            <th>Email Address 
+                                                <!--
+                                                <script src = "../Scripts/userEmail.js">
+													// 之后你有后端的时候，
+													// 把邮箱地址发送到这里：
+												</script> 
+--> </th>
+                                            <td id="emailTextField"> オカリン、Dメール送るの…？ </td>
+                                        </tr>
+                                    </tbody>
+                                </table></td>
+                            <td><li id = "luckyZodiac"> somezoadictext </li>
+                                
+                                <!--
+								<script src = "../Scripts/userFetchLuckyZodiac.js" defer	></script>
+								<script src = "../Scripts/userBirthdayZodiac.js" defer></script>
+--></td>
+                        </tr>
+                    </table> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
