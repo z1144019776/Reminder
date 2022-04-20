@@ -85,6 +85,8 @@
             margin-left: 3%;
             margin-top: 230px;
         }
+
+
         .page {
             position: relative;
             margin-left: 300px;
@@ -126,6 +128,13 @@
             width: 80px;
             height: 32px;
             font-size: 15px;
+        }
+         #btnLogin{
+            position: absolute;
+            margin-left: 65%;
+            margin-top: 400px;
+             width: 80px;
+             height: 32px;
         }
 
         .userInfo{
@@ -191,7 +200,11 @@
 
 <body>
 <div class="box">
+    
+        <button id="btnLogin" onclick="foLogin()">Logout</button>
+
     <div id="tittle">
+
         <!--        <h2 align="center">Personal Homepage</h2>-->
         <div class="box1">
             <div class="png">
@@ -292,7 +305,9 @@
     function foSearch() {
         location.href = "calendar-list.html"
     }
-
+    function foLogin() {
+        location.href = "login.html"
+    }
 
     function updateUserInfo() {
         var username = $('#username_inp').val()
