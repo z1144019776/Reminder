@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace：该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="com.study.studentsys.mapper.SearchHistoryMapper">
+    <select id="findTop5" resultType="com.study.studentsys.entity.SearchHistory">
+        select * from search_history where email = #{email} order by search_time desc limit 5
+    </select>
+    <insert id="insert">
+        insert into search_history(keyword, search_time, email) values (#{keyword}, #{searchTime}, #{email})
+    </insert>
+    <select id="findByKeyword" resultType="com.study.studentsys.entity.SearchHistory">
+        select * from search_history where email = #{email} and keyword = #{keyword}
+    </select>
+    <update id="updateTimeByKeyword">
+        update search_history set search_time = #{time} where email = #{email} and keyword = #{keyword}
+    </update>
+</mapper>
