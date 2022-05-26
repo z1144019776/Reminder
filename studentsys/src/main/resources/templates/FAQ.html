@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+    <style>
+        /*外部深粉色部分 */
+        body{
+            background-color:#fbf7f9;  /*Taikoh*/
+        }
+        .box {
+            height: 800px;
+            width: 1200px;
+            float: left;
+            margin: 20px;
+            margin-left: 250px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background-color: #DD868C;
+        }
+        /*外部浅粉色部分 */
+        .box1 {
+            height: 700px;
+            width: 1160px;
+            margin-left: 20px;
+            margin-top: 50px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background-color:  #EABEC3;
+        }
+
+        input {
+            /*	margin-left: 40px;*/
+            height: 30px;
+            /*	width: 550px;*/
+            text-align: center;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        /* logo */
+        .png {
+            position: absolute;
+            top: 80px;
+            margin-left: 1%;
+            margin-bottom: 50px;
+        }
+        /* 四个按钮 */
+        button {
+            font-size: 20px;
+            font-family: 'schoolbell';
+            position: absolute;
+            top: 250px;
+            margin-left: 4%;
+            color: #d37379;
+            text-shadow: 5px 5px 5px rgb(255, 255, 255), 0px 0px 2px rgb(255, 255, 255);
+            font-family: align;
+            font-weight: 700;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 160px;
+            height: 65px;
+            text-align: center;
+            background: linear-gradient(#dfe9f7, #f5cdd3);
+        }
+
+        #button2 {
+            position: absolute;
+            margin-left: 4%;
+            margin-top: 20px;
+        }
+        #button1 {
+            position: absolute;
+            margin-left: 4%;
+            margin-top: 150px;
+        }
+        #button4 {
+            position:absolute;
+            margin-left: 4%;
+            margin-top: 280px;
+        }
+        .page {
+            position: relative;
+            margin-left: 300px;
+        }
+        #title {
+            font-family: "the-girl-next-door";
+            text-align: center;
+            font-style: oblique;
+            color: #DC9FB4;
+            position: relative;
+            vertical-align: top;
+            font-weight: 700;
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        /*问题1*/
+        .collapsible1 {
+            background-color: rgb(246, 235, 235);
+            color: #d37379;
+            cursor: pointer;
+            padding: 18px;
+            width: 45%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+            margin-left: 0%;
+            margin-top: -100px;
+            border-radius: 10px;    /*按钮设置个圆角*/
+            border:0px; /*去掉边框*/
+        }
+
+        .active.collapsible1 {
+            background-color: rgb(157, 151, 151);
+        }
+
+        .content1 {
+            padding: 20 100px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f5e6e6;
+            width: 100%;
+
+            margin-left: 0%;
+            margin-top: 20px;
+        }
+
+        #container01{
+            max-width: 50%;
+            margin-left: -2%;
+        }
+
+        .collapsible1:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+        }
+
+        .active.collapsible1:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+        /*问题2*/
+        .collapsible2 {
+            background-color: rgb(246, 235, 235);
+            color: #d37379;
+            cursor: pointer;
+            font-size: 30px;
+            margin-left: 0%;
+            margin-top: 100px;
+            border-radius: 10px;   /*圆角边框*/
+            border:0px; /* 去掉边框 */
+
+
+            padding: 7px;
+            width: 0%;
+            border: none;
+            text-align: left;
+            outline: none;
+
+        }
+
+        .active.collapsible2 {
+            background-color: rgb(157, 151, 151);
+        }
+
+        .content2 {
+            padding: 20 100px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f5e6e6;
+            width: 100%;
+
+            margin-left: 0%;
+            margin-top: 20px;
+        }
+
+        #container02{
+            max-width: 50%;
+            margin-top: 3%;
+            margin-left: -2%;
+        }
+
+        .collapsible2:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+        }
+
+        .active.collapsible2:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+        /*问题3*/
+        .collapsible3 {
+            background-color: rgb(246, 235, 235);
+            color: #d37379;
+            cursor: pointer;
+            font-size: 30px;
+            margin-left: 0%;
+            margin-top: 100px;
+            border-radius: 10px;   /*圆角边框*/
+            border:0px; /* 去掉边框 */
+
+
+            padding: 7px;
+            width: 0%;
+            border: none;
+            text-align: left;
+            outline: none;
+
+        }
+
+        .active.collapsible3 {
+            background-color: rgb(157, 151, 151);
+        }
+
+        .content3 {
+            padding: 20 100px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f5e6e6;
+            width: 100%;
+
+            margin-left: 0%;
+            margin-top: 20px;
+        }
+
+        #container03{
+            max-width: 50%;
+            margin-top: 4%;
+            margin-left: -2%;
+        }
+
+        .collapsible3:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+        }
+
+        .active.collapsible3:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+
+
+
+        /*问题4*/
+        .collapsible4 {
+            background-color: rgb(246, 235, 235);
+            color: #d37379;
+            cursor: pointer;
+            font-size: 30px;
+            margin-left: 0%;
+            margin-top: 100px;
+            border-radius: 10px;   /*圆角边框*/
+            border:0px; /* 去掉边框 */
+
+
+            padding: 7px;
+            width: 0%;
+            border: none;
+            text-align: left;
+            outline: none;
+
+        }
+
+        .active.collapsible4 {
+            background-color: rgb(157, 151, 151);
+        }
+
+        .content4 {
+            padding: 20 100px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f5e6e6;
+            width: 100%;
+
+            margin-left: 0%;
+            margin-top: 20px;
+        }
+
+        #container04{
+            max-width: 50%;
+            margin-top: 4%;
+            margin-left: 25%;
+        }
+
+        .collapsible4:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+        }
+
+        .active.collapsible4:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+
+
+
+        /*问题5*/
+        .collapsible5 {
+            background-color: rgb(246, 235, 235);
+            color: #d37379;
+            cursor: pointer;
+            font-size: 30px;
+            margin-left: 0%;
+            margin-top: 100px;
+            border-radius: 10px;   /*圆角边框*/
+            border:0px; /* 去掉边框 */
+
+
+            padding: 7px;
+            width: 0%;
+            border: none;
+            text-align: left;
+            outline: none;
+
+        }
+
+        .active.collapsible5 {
+            background-color: rgb(157, 151, 151);
+        }
+
+        .content5 {
+            padding: 20 100px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f5e6e6;
+            width: 100%;
+
+            margin-left: 0%;
+            margin-top: 20px;
+        }
+
+        #container05{
+            max-width: 50%;
+            margin-top: 4%;
+            margin-left: 25%;
+        }
+
+        .collapsible5:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+        }
+
+        .active.collapsible5:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+
+    </style>
+</head>
+</html>
+<body>
+<div class="box">
+    <div id="tittle">
+        <!--        <h2 align="center">FAQ</h2>-->
+        <div class="box1">
+            <div class="png">
+                <table style="height:700px;border-color:#bdbdbd;
+                        border-left-style:solid;
+                        margin-top: -178px;
+                        margin-left: 250px;
+                        border-width:1px"
+                >
+                    <tr><img src="../static/img/logo.png" width="250" height="170" top="120" alt="logo"/>
+                        <td valign="top"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "navBtn" id="button">
+                <br>
+                <button href="home.html" onclick="toHome()">Home</button>
+                <br>
+            </div>
+            <div class = "navBtn" id="button1">
+                <br>
+                <button href="user.html" onclick="toUser()">User</button>
+                <br>
+            </div>
+            <div class = "navBtn" id="button2">
+                <br>
+                <button href="search.html" onclick="toSearch()">Search</button>
+                <br>
+            </div>
+
+            <div class = "navBtn" id="button4">
+                <br>
+                <button href="FAQ.html" onclick="toFAQ()">FAQ
+                </button>
+                <br>
+            </div>
+            <div class="page">
+                <!--				page text start here-->
+                <div id="title">
+                    <h1>Frequently Asked Questions</h1>
+                </div>
+                <head>
+                    <title>collapse</title>
+                    <meta name="keywords" content="collapse">
+                    <meta name="description" content="collapse div">
+                </head>
+
+                <body>
+                <div id = "container01">
+                    <botton type="button1" class="collapsible1">How to Reset Password?</botton>
+                    <div class="content1">
+                        <p>Log out and click the Reset Password button on the login page. Enter the email address and password again on the Reset Password page.</p>
+                    </div>
+                </div>
+
+                <div id = "container02">
+                    <botton type="button2" class="collapsible2">How to set the starting time in schedule?</botton>
+                    <div class="content2">
+                        <p>Click the date, click the Add event button, and enter the time in the start time column.</p>
+                    </div>
+                </div>
+                <div id = "container03">
+                    <botton type="button3" class="collapsible3">How to add to-do items?</botton>
+                    <div class="content3">
+                        <p>Go to the Home page and click a day to add events</p>
+                    </div>
+                </div>
+
+            </div>
+            <div id = "container04">
+                <botton type="button4" class="collapsible4">How to delete Event reminder?</botton>
+                <div class="content4">
+                    <p>Go to the Home page, click the event that has been set for a certain day, find the delete option, and click Delete.</p>
+                </div>
+            </div>
+            <div id = "container05">
+                <botton type="button5" class="collapsible5">Why is the events I set not being saved? </botton>
+                <div class="content5">
+                    <p>You have to login successfully, then you can set to-do items and save them. <br>
+                        If you do not have an account, please register first.</p><!--这个答案我也写好了不用管，你可以再看看对不对-->
+                </div>
+            </div>
+
+
+
+</body>
+
+<script>
+    function toHome() {
+        location.href = "calendar-home.html"
+    }
+
+    function toSearch() {
+        location.href = "calendar-list.html"
+    }
+
+    function toUser() {
+        location.href = "user.html"
+    }
+    var coll = document.getElementsByClassName("collapsible1");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var coll = document.getElementsByClassName("collapsible2");
+    var j;
+
+    for (j = 0; j < coll.length; j++) {
+        coll[j].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var coll = document.getElementsByClassName("collapsible3");
+    var g;
+
+    for (g = 0; g < coll.length; g++) {
+        coll[g].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var coll = document.getElementsByClassName("collapsible4");
+    var h;
+
+    for (h = 0; h < coll.length; h++) {
+        coll[h].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var coll = document.getElementsByClassName("collapsible5");
+    var h;
+
+    for (k = 0; k < coll.length; k++) {
+        coll[k].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
+</html>
